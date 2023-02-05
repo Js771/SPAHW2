@@ -1,0 +1,96 @@
+<!-- CSS tutorial: https://www.youtube.com/watch?v=yfoY53QXEnI&t=309s 
+    reviewed to learn more about how to develop with CSS.  General page format adapted using tutorial.
+    Complementary colors selected using https://www.canva.com/colors/color-wheel/-->
+<!DOCTYPE html>
+<head>
+    <title>Tic Tac Toe</title>
+    <style>
+        body{
+            background-color:#f4f4f4;
+            color:#555555;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:16px;
+            line-height: 1.6eml;
+            margin:0;
+        }
+        .container{
+            width:80%;
+            margin:auto;
+            overflow:hidden;
+        }
+        #main-header{
+            background-color:#FF7F50;
+            color:#ffffff;
+        }
+        #main{
+            float:left;
+            width:70%;
+            padding:0 30px;
+            box-sizing: border-box;
+        }
+        table, td {
+            border: 1px solid white;
+            border-collapse: collapse;
+        }
+        td {
+            height:100px;
+            min-width:100px;
+            background-color: #0066ff;
+            padding:10px;
+            text-align:center;
+            font-size:75px;
+        }
+        .button-centering{
+           text-align:center;
+        }
+        .button{
+            margin:10px;
+            padding: 10px;
+            min-width:125px;
+            min-height:60px;
+            background-color:#00e5ffc7;
+            border-radius: 5px;  
+            font-size:20px;
+            font-family:Arial, Helvetica, sans-serif; 
+            color:#353535;      
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <h1>Tic Tac Toe</h1>
+        </div>
+    </header>  
+    <div class="container">
+        <section id="main">
+            </br>
+            <!-- Placeholder to indicate turn for X or O -->
+            <h1>Who's Turn: X</h1>
+            </br>
+            <table id="board" style="width:100%">
+                <!-- Create tic tac toe board -->
+                <script>
+                    for(i=1; i<=3; i++){
+                        document.write("<tr>")
+                        for(j=1; j<=3; j++){
+                            document.write("<td>&nbsp</td>")
+                        }    
+                    }
+                    // W3 Schools table element selection: https://www.w3schools.com/jsref/coll_table_cells.asp
+                    // X and O are placeholders for this assignment in order to check sizing
+                    var x = document.getElementById("board").rows[2].cells;
+                    x[1].innerHTML="X"
+                    var x = document.getElementById("board").rows[1].cells;
+                    x[2].innerHTML="O"
+                </script>
+             </table> 
+            </br>
+            <div class="button-centering">
+                <input class="button" type="submit" value="Submit" name=""> 
+                <input class="button" type="submit" value="Clear Board" name=""> 
+            </div>   
+        </section>
+    </div>
+</body>
+</html>
